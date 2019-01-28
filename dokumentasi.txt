@@ -1,0 +1,16 @@
+MOVIES memakai 4 method 
+1.post(./addMovie) dengan 3 property yang harus diisi atau dibutuhkan untuk jalan: nama , tahun , deskripsi. 
+2.put(edit(./editMovie)) untuk bisa mengedit nama, tahun , deskripsi.
+3.get(./getListMovie) unutk mengambil semua list/data yang ada di table MOVIES.
+4.Delete(/.deleteMovies) unutk mendelete MOVIES
+
+MOVIES memakai 4 method 
+1.post(./addCategory) dengan 1 property yang harus diisi atau dibutuhkan untuk jalan: nama. 
+2.put(edit(./editCategory)) untuk bisa mengedit nama.
+3.get(./getListCategory) unutk mengambil semua list/data yang ada di table categories.
+4.Delete(/.deleteCategory) unutk mendelete MOVIES
+
+MOVIES Category(movcat) ada 3 memakai 4 method 
+1.post(./addMovCAt) dengan 2 property yang harus diisi atau dibutuhkan untuk jalan: idMovie, idCategory. 
+3.get(./getListMovCat) unutk mengambil semua list/data yang ada di table movcat.
+4.Delete(/.deleteMovCat) unutk mendelete movcat
