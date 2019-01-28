@@ -13,4 +13,4 @@ MOVIES memakai 4 method
 MOVIES Category(movcat) ada 3 memakai 4 method 
 1.post(./addMovCAt) dengan 2 property yang harus diisi atau dibutuhkan untuk jalan: idMovie, idCategory. 
 3.get(./getListMovCat) unutk mengambil semua list/data yang ada di table movcat.
-4.Delete(/.deleteMovCat) unutk mendelete movcat
+4.Delete(/.deleteMovCat) untuk mendelete movcat

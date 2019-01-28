@@ -67,7 +67,7 @@ app.post('/addCategories', (req,res) => {
     })
 })
 
-app.post('/addMovieCategorie', (req,res) => {
+app.post('/addMovCat', (req,res) => {
     var idMovie = req.body.idMovie;
     var idcategory = req.body.idcategory;
     var sql = `insert into movcat select m.id as idmovie ,c.id as idcategory from movies m join categories c on c.id
@@ -116,7 +116,7 @@ app.delete('/deleteCategorie/:id',(req,res)=>{
     })
 })
 
-app.delete('/deleteMoviesCategorie',(req,res)=>{
+app.delete('/deleteMovCat',(req,res)=>{
     var sql =``;
     conn.query(sql, (err, result) => {//////////DELETE TABLE MOVIE CATEGORIE///////////////////
         if(err) throw err;
