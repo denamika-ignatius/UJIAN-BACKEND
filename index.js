@@ -85,7 +85,6 @@ app.put('/editMovies/:id',(req,res)=>{
     var sql =`SELECT * from movies where id = ${MovieId};`;
     conn.query(sql, (err, result) => {//////////EDIT TABLE MOVIE/////////////////////////
         if(err) throw err;
-        const data = JSON.parse(req.body.data);
         sql = `Update movies set nama='${data.nama}' where id = ${MovieId};`
     })
 })
@@ -95,7 +94,6 @@ app.put('/editCategories/:id',(req,res)=>{
     var sql =`SELECT * from categories where id = ${CategoryId};`;
     conn.query(sql, (err, result) => {//////////EDIT TABLE Categories///////////////////
         if(err) throw err;
-        const data = JSON.parse(req.body.data);
         sql = `Update categories set nama='${data.nama}' where id = ${CategoryId};`
         res.send(result);
     })
@@ -103,7 +101,7 @@ app.put('/editCategories/:id',(req,res)=>{
 /////////////////////////////////END METHOD PUT(EDIT)//////////////////////////////////////
 /////////////////////////////////START METHOD DELETE///////////////////////////////////////
 app.delete('/deleteMovie/:id',(req,res)=>{
-    var sql =``;
+    var sql =`SELECT * from movies where id = ${MovieId};`;
     conn.query(sql, (err, result) => {//////////DELETE TABLE MOVIE///////////////////
         if(err) throw err;
         res.send(result);
@@ -111,8 +109,8 @@ app.delete('/deleteMovie/:id',(req,res)=>{
 })
 
 app.delete('/deleteCategorie/:id',(req,res)=>{
-    var sql =``;
-    conn.query(sql, (err, result) => {//////////DELETE TABLE CATEGORIE///////////////////
+    var sql =`SELECT * from categories where id = ${CategoryId};`;
+        conn.query(sql, (err, result) => {//////////DELETE TABLE CATEGORIE///////////////////
         if(err) throw err;
         res.send(result);
     })
