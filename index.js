@@ -44,7 +44,9 @@ app.get('/getListCategories',(req,res)=>{
 
 app.get('/getListMovieCategorie',(req,res)=>{
     var sql = `select m.nama as movie, c.nama as category from 
-    movies m join categories c where (m.id = (select idmovie from movcat) and c.id =(select idcategory from movcat))`
+    movies m join categories c where 
+    (m.id = (select idmovie from movcat) and 
+    c.id = (select idcategory from movcat))`
 
     conn.query(sql, (err, result) => {////////////////GET LIST CONNECT MOVIE DENGAN CATEGORIE////////////////
         if (err) throw err; 
